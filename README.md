@@ -1,4 +1,4 @@
-<img width="1837" height="887" alt="image" src="https://github.com/Buage/hylook.cc/blob/main/hylook-logo.png?raw=true" /><img src="" alt="" align="middle" width="225" height="150"><h1 align="center">hylook.cc</h1>
+<img src="https://github.com/Buage/hylook.cc/blob/main/hylook-logo.png?raw=true" alt="" align="middle" width="225" height="150"><h1 align="center">hylook.cc</h1>
 <p align="center"><a href="#project-description">Project Description</a> - <a href="#key-features">Key Features</a> - <a href="#technology-stack">Tech Stack</a></p>
 
 <img src="https://github.com/Buage/hylook.cc/blob/main/preview.png?raw=true" alt="" align="middle" width="auto" height="auto">
