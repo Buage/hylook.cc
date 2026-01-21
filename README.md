@@ -26,3 +26,5 @@ here are some features hylook.cc has
 ## Tech Stack
 
 **Frontend**: HTML, CSS, JS **Backend**: PHP
+
+## Switch branch to see the frontend or backend
