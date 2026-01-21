@@ -41,6 +41,11 @@ body.light {
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 100%;
+}
+
+hr {
+    max-width: 100%;
 }
 
 .loader {
@@ -126,6 +131,7 @@ input {
     justify-content: center;
     flex-direction: row !important;
     gap: 20px !important;
+    width: 100%;
 }
 
 .stat-card {
@@ -180,4 +186,21 @@ input {
 
 .stat-card-subtitle.large {
     font-size: 13.5px;
+}
+
+@media (max-width: 768px) {
+    .bottom-right {
+        bottom: 93%;
+        right: 80px;
+        transform: translateX(50%);
+    }
+
+    .stats-container {
+        bottom: 20px;
+    }
+
+    .footer-1 {
+        width: 200px;
+        left: 20px;
+    }
 }

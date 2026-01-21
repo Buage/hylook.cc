@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hylook.cc</title>
+    <title>hylook.cc - hytale username check</title>
+    <meta name="description" content="check hytale username availability in one click. find and reserve names.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Buage/CappyCSS@main/styles.css">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="dark">
     <div class="wrapper">
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; max-width: 90%;">
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <h3>hylook.cc</h3>
                 <p>hytale username checker.</p>
@@ -26,7 +27,7 @@
 
             <hr>
 
-            <div class="search-results hidden">
+            <div class="search-results hidden" style="max-width: 90%;">
                 <div class="result-infos">
                     <p id='username-status'>status: taken</p>
                     <p id="total-searches">total searches: 0</p>
@@ -75,6 +76,8 @@
                 </div>
             </div>
         </div>
+
+        <p class="footer-1" style="position: absolute; bottom: 10px; opacity: 0.6;">we are not affiliated with hytale or hypixel studios.</p>
     </div>
 
     <script src="/script.js"></script>

@@ -46,8 +46,9 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
         if (data.status === "success") {
 
             document.getElementById('search-load').classList.add('hidden')
-
             document.querySelector('.search-results').classList.remove('hidden')
+
+            document.getElementById('ai-rarity-analysis').textContent = "generating an ai analysi just for you. hang tight!"
 
             document.getElementById('username-status').textContent = "status: " + data.data.username_status
             document.getElementById('total-searches').textContent = "total searches: " + data.data.total_searches
@@ -62,6 +63,13 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
         }
     })
 })
+
+document.getElementById('username-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        document.getElementById('lookup-btn').click();
+    }
+});
+
 
 fetch('https://fuck.buage.dev/stats.php', { method: 'GET' })
 .then(res => res.json())
