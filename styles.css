@@ -202,5 +202,11 @@ input {
     .footer-1 {
         width: 200px;
         left: 20px;
+        bottom: 80px !important; 
+    }
+
+    .footer-2 {
+        width: 250px;
+        left: 20px;
     }
 }
