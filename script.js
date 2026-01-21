@@ -36,13 +36,39 @@ document.getElementById('lm-btn').addEventListener('click', function() {
 });
 
 document.getElementById('lookup-btn').addEventListener('click', function() {
-    fetch('https://hylookapi.buage.dev/lookup?user=' + document.getElementById('username-input').value)
+    let user = document.getElementById('username-input').value
+
+    document.getElementById('search-load').classList.remove('hidden')
+
+    fetch('https://lmao.buage.dev/lookup.php?user=' + user)
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success") {
+
+            document.getElementById('search-load').classList.add('hidden')
+
+            document.querySelector('.search-results').classList.remove('hidden')
+
+            document.getElementById('username-status').textContent = "status: " + data.data.username_status
+            document.getElementById('total-searches').textContent = "total searches: " + data.data.total_searches
+            document.getElementById('monthly-searches').textContent = "total searches: " + data.data.monthly_searches
+            document.getElementById('yearly-searches').textContent = "total searches: " + data.data.yearly_searches
+
+            fetch('https://lmao.buage.dev/rarityAnalysis.php?user=' + user + '&token=' + data.data.generated_token)
+            .then(response => response.json())
+            .then(rarityData => {
+                document.getElementById('ai-rarity-analysis').textContent = rarityData.result
+            })
+        }
+    })
 })
 
 fetch('https://fuck.buage.dev/stats.php', { method: 'GET' })
 .then(res => res.json())
 .then(data => {
     if (!data.ok) return;
-    document.getElementById('totalViews').textContent = data.totals.visits + ' views';
-    document.getElementById('totalLm').textContent = data.lightmode.enabled + ' visitors';
+    document.getElementById('totalViews').textContent = data.totals.visits;
+    document.getElementById('totalLm').textContent = data.lightmode.enabled;
 });
+
+fetch('https://fuck.buage.dev/visit.php');
