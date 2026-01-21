@@ -1,0 +1,22 @@
+[
+  {
+    "name": "csrf_token_client",
+    "value": ""
+  },
+  {
+    "name": "_cfuvid",
+    "value": ""
+  },
+  {
+    "name": "csrf_token",
+    "value": ""
+  },
+  {
+    "name": "csrf_token_abc",
+    "value": ""
+  },
+  {
+    "name": "ory_kratos_session",
+    "value": ""
+  }
+]

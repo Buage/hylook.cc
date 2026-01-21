@@ -1,0 +1,2 @@
+Generated a key here: https://console.mistral.ai/home?workspace_dialog=apiKeys
+And put it in this file
